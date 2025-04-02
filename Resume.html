@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lingouda Patil - Resume</title>
+	   <link rel="stylesheet" href="portfolio.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        /* Existing styles from question + modifications */
+        :root {
+            --primary: #2c3e50;
+            --secondary: #3498db;
+            --dark: #2c3e50;
+            --light: #f8f9fa;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f0f2f5;
+        }
+
+        .resume-container {
+            padding: 4rem 5%;
+            background: white;
+            max-width: 1200px;
+            margin: 2rem auto;
+            border-radius: 16px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.05);
+        }
+
+        .resume-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .resume-header h1 {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+            margin-bottom: 2rem;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .resume-section {
+            margin-bottom: 3rem;
+        }
+
+        .section-title {
+            color: var(--primary);
+            border-bottom: 2px solid var(--secondary);
+            padding-bottom: 0.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .project-item, .education-item {
+            margin-bottom: 2rem;
+            padding: 1rem;
+            background: var(--light);
+            border-radius: 8px;
+        }
+
+        .certification-list {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        .certification-list li {
+            margin-bottom: 0.5rem;
+        }
+
+        a {
+            color: var(--secondary);
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+		
+		
+		
+		
+		
+        /* Modal Styles */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .modal-content {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            width: 90%;
+            max-width: 400px;
+            animation: modalSlide 0.3s ease-out;
+        }
+
+        @keyframes modalSlide {
+            from { transform: translateY(-100px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 0.8rem;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 1rem;
+        }
+
+        .modal-actions {
+            display: flex;
+            gap: 1rem;
+            justify-content: flex-end;
+        }
+
+        .btn {
+            padding: 0.6rem 1.2rem;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: 500;
+        }
+
+        .btn-primary {
+            background: #3498db;
+            color: white;
+        }
+
+        .btn-secondary {
+            background: #666;
+            color: white;
+        }
+
+        #successModal .modal-content {
+            text-align: center;
+            padding: 2.5rem 2rem;
+        }
+
+        .success-icon {
+            font-size: 2.5rem;
+            color: #4CAF50;
+            margin-bottom: 1rem;
+        }	
+		
+		
+    </style>
+</head>
+<body>
+
+
+
+<header id="home">
+        <h1>Lingouda Patil</h1>
+        <p>Full Stack Developer</p>
+        <nav>
+            <ul class="topbar">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="Resume.html" class="active">Resume</a></li>
+                <li><a href="Cert.html">Certificates</a></li>
+                <li><a href="Project.html">Projects</a></li>
+                <li><a href="Contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+
+
+    <main class="resume-container">
+        <div class="resume-header">
+            <h1>Lingouda Patil</h1>
+            <p>Full Stack Developer</p>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Belagavi, Karnataka</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <a href="mailto:lingoudap@gmail.com">lingoudap@gmail.com</a>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-phone"></i>
+                    <a href="tel:+917026589882">+91 7026589882</a>
+                </div>
+            </div>
+            <div class="social-links">
+                <a href="https://linkedin.com/in/lingouda-patil-267134212" target="_blank">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://github.com/lingoudappatil" target="_blank">
+                    <i class="fab fa-github"></i>
+                </a>
+            </div>
+        </div>
+
+        <section class="resume-section">
+            <h2 class="section-title">Summary</h2>
+            <p>Enthusiastic Graduate with a degree in Computer Science and a passion for software development. Proficient in Programming Languages with a strong foundation in algorithm design. Eager to contribute to a dynamic team and apply problem-solving skills in a collaborative environment.</p>
+        </section>
+
+        <section class="resume-section">
+            <h2 class="section-title">Technical Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>Languages</h3>
+                    <ul>
+                        <li>JavaScript</li>
+                        <li>PHP</li>
+                        <li>HTML/CSS</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>Frameworks</h3>
+                    <ul>
+                        <li>React.js</li>
+                        <li>Node.js</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3>Databases</h3>
+                    <ul>
+                        <li>MySQL</li>
+                        <li>MongoDB</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="resume-section">
+            <h2 class="section-title">Experience</h2>
+            <div class="experience-item">
+                <h3>Full Stack Developer Intern - Rachana Infotech Software Pvt.Ltd</h3>
+                <ul>
+                    <li>Created responsive Admin Panel for web applications</li>
+                    <li>Integrated frontend design and improved system functionality</li>
+                    <li>Demonstrated strong problem-solving skills in web development</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="resume-section">
+            <h2 class="section-title">Education</h2>
+            <div class="education-item">
+                <h3>MCA - KLE M S Sheshgiri Engineering College (2023)</h3>
+                <h3>BCA - S J P N Trusts BCA College (2021)</h3>
+                <h3>PUC(Science) - SBM PU College (2018)</h3>
+                <h3>SSLC - N C High School (2016)</h3>
+            </div>
+        </section>
+
+        <section class="resume-section">
+            <h2 class="section-title">Projects</h2>
+            <div class="project-item">
+                <h3>Sale Management Admin Panel</h3>
+                <ul>
+                    <li>Built with PHP and MySQL</li>
+                    <li>Implemented data visualization with Chart.js</li>
+                    <li><a href="#">View Project</a></li>
+                </ul>
+            </div>
+            <div class="project-item">
+                <h3>Chat Application</h3>
+                <ul>
+                    <li>Real-time communication using Socket.io</li>
+                    <li>Node.js backend with HTML/CSS frontend</li>
+                    <li><a href="#">View Project</a></li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Download Button -->
+    <div class="download-section">
+        <a href="#" class="download-btn" id="downloadTrigger">
+            <i class="fas fa-download"s></i> Download PDF Resume
+        </a>
+    </div>
+  </main>
+    <!-- Request Modal -->
+    <div class="modal" id="requestModal">
+        <div class="modal-content">
+            <h2>Request Resume</h2>
+            <form id="requestForm">
+                <div class="form-group">
+                    <label for="userName">Your Name:</label>
+                    <input type="text" id="userName" required>
+                </div>
+                <div class="form-group">
+                    <label for="userNumber">Phone Number:</label>
+                    <input type="tel" id="userNumber" required>
+                </div>
+                <div class="modal-actions">
+                    <button type="button" class="btn btn-secondary" onclick="closeModal()">Cancel</button>
+                    <button type="submit" class="btn btn-primary">Submit Request</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Success Modal -->
+    <div class="modal" id="successModal">
+        <div class="modal-content">
+            <div class="success-icon">
+                <i class="fas fa-check-circle"></i>
+            </div>
+            <h3>Request Submitted Successfully!</h3>
+            <p>Your resume download will start shortly.</p>
+            <button class="btn btn-primary" onclick="closeSuccessModal()">OK</button>
+        </div>
+    </div>
+
+ <script>
+        // Get modal elements
+        const requestModal = document.getElementById('requestModal');
+        const successModal = document.getElementById('successModal');
+
+        // Show request modal when download button is clicked
+        document.getElementById('downloadTrigger').addEventListener('click', function(e) {
+            e.preventDefault();
+            requestModal.style.display = 'flex';
+        });
+
+        // Handle form submission
+        document.getElementById('requestForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const userName = document.getElementById('userName').value;
+            const userNumber = document.getElementById('userNumber').value;
+
+            if(!userName || !userNumber) {
+                alert('Please fill in all fields');
+                return;
+            }
+
+            // Here you would typically send the data to your server
+            console.log('New request:', { name: userName, number: userNumber });
+
+            // Show success modal
+            requestModal.style.display = 'none';
+            successModal.style.display = 'flex';
+
+            // Start download after 1 second
+            setTimeout(() => {
+                window.location.href = 'Patil Lingouda_Resume.pdf';
+                closeSuccessModal();
+            }, 1000);
+        });
+
+        // Close modals
+        function closeModal() {
+            requestModal.style.display = 'none';
+        }
+
+        function closeSuccessModal() {
+            successModal.style.display = 'none';
+        }
+
+        // Close modal when clicking outside
+        window.onclick = function(event) {
+            if(event.target.classList.contains('modal')) {
+                closeModal();
+                closeSuccessModal();
+            }
+        }
+    </script>
+  
+	
+</body>
+</html>
